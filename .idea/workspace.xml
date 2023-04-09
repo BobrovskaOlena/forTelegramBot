@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1c1a99e6-ccc4-46fd-9e2f-5daa508d1b62" name="Changes" comment="1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/feature/currency/Currency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/feature/currency/Currency.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/feature/currency/CurrencyItem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/feature/currency/CurrencyItem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/feature/currency/CurrencyItemPrivatBank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/feature/currency/CurrencyItemPrivatBank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/feature/currency/CurrencyItemPrivatBank.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/feature/currency/CurrencyParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/feature/currency/CurrencyParser.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

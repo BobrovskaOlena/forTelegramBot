@@ -1,5 +1,7 @@
 package com.feature.currency;
 
+import java.util.Objects;
+
 public class CurrencyItem {
     private CCY ccy;
     private CCY base_ccy;
@@ -9,7 +11,25 @@ public class CurrencyItem {
     public CCY getCcy() {
         return ccy;
     }
-
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+        if (o == null || getClass() != o.getClass()) {
+            return false;
+        }
+        CurrencyItem that = (CurrencyItem) o;
+        if (!Objects.equals(ccy, that.ccy)) {
+            return false;
+        }
+        if (base_ccy != that.base_ccy) {
+            return false;
+        }
+        if (Float.compare(that.buy, buy) != 0) {
+            return false;
+        }
+        return Float.compare(that.sale, sale) == 0;
+    }
     public CCY getBase_ccy() {
         return base_ccy;
     }
@@ -52,13 +72,6 @@ public class CurrencyItem {
         EUR,
         USD,
         PLZ,
-        UAH,
-        CHF,
-        CZK,
-        GBP,
-        ILS,
-        JPY,
-        NOK,
-        SEK
+        UAH
     }
 }
