@@ -52,6 +52,13 @@ public class CurrencyItem {
         EUR,
         USD,
         PLZ,
-        UAH
+        UAH,
+        CHF,
+        CZK,
+        GBP,
+        ILS,
+        JPY,
+        NOK,
+        SEK
     }
 }

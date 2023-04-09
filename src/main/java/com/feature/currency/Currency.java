@@ -3,5 +3,12 @@ package com.feature.currency;
 public enum Currency {
     EUR,
     USD,
-    PLZ
+    PLZ,
+    CHF,
+    CZK,
+    GBP,
+    ILS,
+    JPY,
+    NOK,
+    SEK
 }
