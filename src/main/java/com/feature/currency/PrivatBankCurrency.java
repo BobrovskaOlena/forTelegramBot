@@ -11,7 +11,7 @@ import java.util.List;
 
 public class PrivatBankCurrency {
 
-    public void getRates(Currency currency) throws IOException{
+    public List<CurrencyItem> getRates(Currency currency) throws IOException{
         String url = "https://api.privatbank.ua/p24api/pubinfo?exchange&coursid=5";
         String urlPLZ = "https://api.privatbank.ua/p24api/pubinfo?exchange&coursid=4";
         String response = Jsoup
@@ -42,8 +42,6 @@ public class PrivatBankCurrency {
                 filteredCurrencyItems.add(currencyItem);
             }
         }
-        for (CurrencyItem currencyItem : filteredCurrencyItems) {
-            System.out.println(currencyItem);
-        }
+        return filteredCurrencyItems;
     }
 }

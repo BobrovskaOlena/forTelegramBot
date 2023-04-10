@@ -5,7 +5,7 @@ import java.io.IOException;
 public class PrivatBankCurrencyService implements CurrencyService{
     @Override
     public double getPurchaseRate(Currency currency) throws IOException {
-        Float uahCurrency = filteredCurrencyItems
+        Float uahCurrency = P
                 .stream()
                 .filter(it->it.getCcy().equals(currency))
                 .filter(it -> it.getBase_ccy().equals(Currency.UAH))
