@@ -1,20 +1,29 @@
 package com.feature.currency;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-import org.jsoup.Jsoup;
-
 import java.io.IOException;
-import java.lang.reflect.Type;
-import java.util.List;
 
-public class PrivatBankCurrencyService implements CurrencyService {
+public class PrivatBankCurrencyService implements CurrencyService{
+    @Override
+    public double getPurchaseRate(Currency currency) throws IOException {
+        Float uahCurrency = filteredCurrencyItems
+                .stream()
+                .filter(it->it.getCcy().equals(currency))
+                .filter(it -> it.getBase_ccy().equals(Currency.UAH))
+                .map(CurrencyItem::getBuy)
+                .findFirst()
+                .orElseThrow();
+        return 0;
+    }
 
-
-
-    public double getRate(Currency currency) throws IOException {
-
-
+    @Override
+    public double getSalesRate(Currency currency) throws IOException {
+        Float currencyUah = filteredCurrencyItems
+                .stream()
+                .filter(it->it.getCcy().equals(currency))
+                .filter(it -> it.getBase_ccy().equals(Currency.UAH))
+                .map(CurrencyItem::getSale)
+                .findFirst()
+                .orElseThrow();
         return 0;
     }
 }

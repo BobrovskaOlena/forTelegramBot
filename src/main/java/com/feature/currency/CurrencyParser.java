@@ -33,9 +33,9 @@ public class CurrencyParser {
         currencyItems.addAll(currencyItems2);
         List<CurrencyItem> filteredCurrencyItems = new ArrayList<>();
         for (CurrencyItem currencyItem : currencyItems) {
-            if (currencyItem.getCcy() != null &&(currencyItem.getCcy().equals(CurrencyItem.CCY.USD) ||
-                    currencyItem.getCcy().equals(CurrencyItem.CCY.EUR) ||
-                    currencyItem.getCcy().equals(CurrencyItem.CCY.PLZ))) {
+            if (currencyItem.getCcy() != null &&(currencyItem.getCcy().equals(Currency.USD) ||
+                    currencyItem.getCcy().equals(Currency.EUR) ||
+                    currencyItem.getCcy().equals(Currency.PLZ))) {
                 filteredCurrencyItems.add(currencyItem);
             }
         }
@@ -46,8 +46,8 @@ public class CurrencyParser {
 
         Float uahUsd = filteredCurrencyItems
                 .stream()
-                .filter(it->it.getCcy().equals(CurrencyItem.CCY.USD))
-                .filter(it -> it.getBase_ccy().equals(CurrencyItem.CCY.UAH))
+                .filter(it->it.getCcy().equals(Currency.USD))
+                .filter(it -> it.getBase_ccy().equals(Currency.UAH))
                 .map(CurrencyItem::getBuy)
                 .findFirst()
                 .orElse(null);
@@ -58,8 +58,8 @@ public class CurrencyParser {
         }
         Float usdUah = filteredCurrencyItems
                 .stream()
-                .filter(it->it.getCcy().equals(CurrencyItem.CCY.USD))
-                .filter(it -> it.getBase_ccy().equals(CurrencyItem.CCY.UAH))
+                .filter(it->it.getCcy().equals(Currency.USD))
+                .filter(it -> it.getBase_ccy().equals(Currency.UAH))
                 .map(CurrencyItem::getSale)
                 .findFirst()
                 .orElse(null);
@@ -72,8 +72,8 @@ public class CurrencyParser {
 
         Float uahEur = filteredCurrencyItems
                 .stream()
-                .filter(it->it.getCcy().equals(CurrencyItem.CCY.EUR))
-                .filter(it -> it.getBase_ccy().equals(CurrencyItem.CCY.UAH))
+                .filter(it->it.getCcy().equals(Currency.EUR))
+                .filter(it -> it.getBase_ccy().equals(Currency.UAH))
                 .map(CurrencyItem::getBuy)
                 .findFirst()
                 .orElse(null);
@@ -84,8 +84,8 @@ public class CurrencyParser {
         }
         Float eurUah = filteredCurrencyItems
                 .stream()
-                .filter(it->it.getCcy().equals(CurrencyItem.CCY.EUR))
-                .filter(it -> it.getBase_ccy().equals(CurrencyItem.CCY.UAH))
+                .filter(it->it.getCcy().equals(Currency.EUR))
+                .filter(it -> it.getBase_ccy().equals(Currency.UAH))
                 .map(CurrencyItem::getSale)
                 .findFirst()
                 .orElse(null);
@@ -98,8 +98,8 @@ public class CurrencyParser {
 
         Float uahPlz = filteredCurrencyItems
                 .stream()
-                .filter(it->it.getCcy().equals(CurrencyItem.CCY.PLZ))
-                .filter(it -> it.getBase_ccy().equals(CurrencyItem.CCY.UAH))
+                .filter(it->it.getCcy().equals(Currency.PLZ))
+                .filter(it -> it.getBase_ccy().equals(Currency.UAH))
                 .map(CurrencyItem::getBuy)
                 .findFirst()
                 .orElse(null);
@@ -110,8 +110,8 @@ public class CurrencyParser {
         }
         Float plzUah = filteredCurrencyItems
                 .stream()
-                .filter(it->it.getCcy().equals(CurrencyItem.CCY.PLZ))
-                .filter(it -> it.getBase_ccy().equals(CurrencyItem.CCY.UAH))
+                .filter(it->it.getCcy().equals(Currency.PLZ))
+                .filter(it -> it.getBase_ccy().equals(Currency.UAH))
                 .map(CurrencyItem::getSale)
                 .findFirst()
                 .orElse(null);

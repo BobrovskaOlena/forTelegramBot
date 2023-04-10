@@ -3,5 +3,6 @@ package com.feature.currency;
 import java.io.IOException;
 
 public interface CurrencyService {
-    double getRate(Currency currency) throws IOException;
+    double getPurchaseRate(Currency currency) throws IOException;
+    double getSalesRate(Currency currency) throws IOException;
 }
