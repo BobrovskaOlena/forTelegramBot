@@ -4,16 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c1a99e6-ccc4-46fd-9e2f-5daa508d1b62" name="Changes" comment="1">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/feature/currency/Tests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/feature/currency/CurrencyParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/feature/currency/CurrencyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/feature/currency/CurrencyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/feature/currency/PrivatBankCurrency.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/feature/currency/PrivatBankCurrencyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/feature/currency/PrivatBankCurrencyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/feature/currency/TelegramBotApp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/feature/printCurrency/PrintCurrencyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/feature/printCurrency/PrintCurrencyService.java" afterDir="false" />
-    </list>
+    <list default="true" id="1c1a99e6-ccc4-46fd-9e2f-5daa508d1b62" name="Changes" comment="1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
