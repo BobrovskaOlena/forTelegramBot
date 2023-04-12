@@ -6,11 +6,13 @@ import com.feature.currency.CurrencyService;
 import com.feature.currency.PrivatBankCurrencyService;
 
 import java.io.IOException;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class PrintCurrencyService {
     CurrencyService currencyService = new PrivatBankCurrencyService();
-    public double salesRates(Currency currency) {
-        double salesRate;
+    public BigDecimal salesRates(Currency currency) {
+        BigDecimal salesRate;
         try {
             salesRate = currencyService.getSalesRate(currency);
         } catch (IOException e) {
@@ -18,8 +20,8 @@ public class PrintCurrencyService {
         }
         return salesRate;
     }
-    public double purchaseRates (Currency currency) {
-        double purchaseRate;
+    public BigDecimal purchaseRates (Currency currency) {
+        BigDecimal purchaseRate;
         try {
             purchaseRate = currencyService.getPurchaseRate(currency);
         } catch (IOException e) {
@@ -27,10 +29,10 @@ public class PrintCurrencyService {
         }
         return purchaseRate;
     }
-    public String convert(double salesRate, double purchaseRate, Currency currency){
+    public String convert(BigDecimal salesRate, BigDecimal purchaseRate, Currency currency){
         String templateOfMessage = "Purchase rate UAH => ${currency} = ${purchaseRate}\nSales rate ${currency} => UAH = ${salesRate}";
-        float roundedRate = Math.round(salesRate*100d)/100.f;
-        float roundedRate2 = Math.round(purchaseRate*100d)/100.f;
+        BigDecimal roundedRate = salesRate.setScale(2, RoundingMode.HALF_UP);
+        BigDecimal roundedRate2 = purchaseRate.setScale(2, RoundingMode.HALF_UP);
         return templateOfMessage
                 .replace("${currency}", currency.name())
                 .replace("${salesRate}",roundedRate +"")

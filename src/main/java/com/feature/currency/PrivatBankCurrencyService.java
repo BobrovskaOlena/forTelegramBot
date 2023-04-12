@@ -6,6 +6,7 @@ import org.jsoup.Jsoup;
 
 import java.io.IOException;
 import java.lang.reflect.Type;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +14,7 @@ public class PrivatBankCurrencyService implements CurrencyService {
     private final String url = "https://api.privatbank.ua/p24api/pubinfo?exchange&coursid=5";
     private final String urlPLZ = "https://api.privatbank.ua/p24api/pubinfo?exchange&coursid=4";
     @Override
-    public double getPurchaseRate(Currency currency) throws IOException{
+    public BigDecimal getPurchaseRate(Currency currency) throws IOException{
         String response = Jsoup
                 .connect(urlPLZ)
                 .ignoreContentType(true)
@@ -52,7 +53,7 @@ public class PrivatBankCurrencyService implements CurrencyService {
                 .orElseThrow();
     }
     @Override
-    public double getSalesRate(Currency currency) throws IOException{
+    public BigDecimal getSalesRate(Currency currency) throws IOException{
         String response = Jsoup
                 .connect(urlPLZ)
                 .ignoreContentType(true)
